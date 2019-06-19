@@ -20,6 +20,14 @@ class CharacterListView extends React.Component {
       // return something here to indicate that you are fetching data
       return(<p>loading...</p>)
     }
+    if (this.props.error !== ''){
+      return (
+        <div>
+          <h1>Uh-Oh!</h1>
+          <p>{this.props.error}</p>
+        </div>
+      )
+    }
     return (
       <div className="CharactersList_wrapper">
         <CharacterList characters={this.props.characters} />
