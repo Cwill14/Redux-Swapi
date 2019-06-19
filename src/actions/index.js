@@ -13,7 +13,7 @@ export const FETCH_ERROR = "FETCH_ERROR";
 export const getData = () => dispatch => {
     dispatch({ type: FETCH_REQUEST });
     axios
-        .get("https://swapi.co/api/peope/")
+        .get("https://swapi.co/api/people/")
         .then(res => {
             console.log(res)
             dispatch({ type: FETCH_SUCCESS, payload: res.data.results })
